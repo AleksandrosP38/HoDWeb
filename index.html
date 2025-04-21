@@ -12,29 +12,8 @@
       color: #fff;
     }
 
-    header {
-      background-color: #111;
-      padding: 1rem 2rem;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
     .content {
-      padding: 6rem 1rem 4rem 1rem;
+      padding: 4rem 1rem; /* Adjusted padding since we removed header */
       max-width: 100%;
       margin: 0 auto;
     }
@@ -49,6 +28,7 @@
       margin: 8rem 0;
       gap: 2rem;
       padding: 0;
+      align-items: center;
     }
 
     .text {
@@ -69,17 +49,45 @@
       max-width: 90%;
     }
 
-    img {
+    .media-container {
       width: 100%;
-      max-width: 400px;
-      height: auto;
+      max-width: 600px;
       border-radius: 1rem;
-      box-shadow: 0 0 10px #0ff2;
-      justify-self: end;
+      overflow: hidden;
+      box-shadow: 0 0 10px #0ff;
     }
 
-    .section:nth-child(odd) img {
+    img, .gif-container {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .section:nth-child(odd) .media-container {
       justify-self: start;
+    }
+
+    .section:nth-child(even) .media-container {
+      justify-self: end;
     }
 
     ul {
@@ -99,7 +107,7 @@
         margin-left: 0;
       }
 
-      img {
+      .media-container {
         margin-top: 1rem;
         justify-self: center !important;
       }
@@ -108,6 +116,7 @@
     .intro {
       text-align: center;
       margin-bottom: 4rem;
+      padding-top: 2rem; /* Added some top padding */
     }
 
     .intro h1 {
@@ -127,38 +136,45 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <!-- Header section removed as requested -->
 
   <div class="intro">
-    <h1><p></p>HEADS OR DEATH</h1>
+    <h1>HEADS OR DEATH</h1>
     <h3>First-Person Arena Shooter</h3>
     <p><strong>Platform:</strong> PC</p>
   </div>
   
   <div class="content">
+    <!-- First Section with YouTube Video -->
     <div class="section">
       <div class="text left">
         <h2>Survive the Chaos, Master the Mayhem!</h2>
         <p>In <em>Heads or Death</em>, every shot counts—literally. Battle against waves of enemies in a futuristic arena where <strong>headshots</strong> don't just eliminate enemies; they determine your fate. Land a <strong>green</strong> headshot, and you gain a <strong>buff</strong>. Hit a <strong>red</strong> one, and you suffer a <strong>debuff</strong>. Precision is the key to survival in this <strong>high-speed FPS challenge!</strong></p>
       </div>
-      <img src="https://picsum.photos/400?random=1" alt="Gameplay screenshot" />
-    </div>
-
-    <div class="section">
-      <img src="https://picsum.photos/400?random=2" alt="Adrenaline gameplay" />
-      <div class="text right">
-        <h2>Adrenaline-Fueled Gameplay</h2>
-        <p>The game pushes you to react fast, aim true, and adapt to unpredictable power shifts as enemies get stronger. Survive as long as possible, stack buffs, and dominate the arena!</p>
+      <div class="media-container">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/zzQDJMJkufY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
+    <!-- Second Section with GIF -->
+    <div class="section">
+      <div class="media-container">
+        <img src="https://github.com/AleksandrosP38/HoDWeb/blob/main/ezgif.com-video-to-gif-converter.gif?raw=true" alt="Intense combat gameplay" class="gif-container" />
+      </div>
+      <div class="text right">
+        <h2>High-Octane Combat Experience</h2>
+        <p>The game pushes you to react fast, aim true, and adapt to unpredictable power shifts as enemies get stronger. Survive as long as possible while mastering these key elements:</p>
+        <ul>
+          <li><strong>Precision Shooting:</strong> Every headshot matters - choose between buffs and debuffs in split-second decisions</li>
+          <li><strong>Arena Dynamics:</strong> Navigate an evolving battlefield with hazards and environmental challenges</li>
+          <li><strong>Fluid Movement:</strong> Responsive controls enable fast-paced, acrobatic gunplay</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Third Section with Buff Images -->
     <div class="section">
       <div class="text left">
         <h2>Dynamic Buff & Debuff System</h2>
@@ -169,28 +185,34 @@
         </ul>
         <p>Buffs can supercharge your abilities—faster movement, more damage, or even bullet storms. But beware: debuffs can slow you down, weaken your attacks, or throw unexpected chaos into the mix!</p>
       </div>
-      <img src="https://picsum.photos/400?random=3" alt="Buff system example" />
-    </div>
-
-    <div class="section">
-      <img src="https://picsum.photos/400?random=4" alt="Combat mechanics" />
-      <div class="text right">
-        <h2>Fast-Paced Combat & Advanced Mechanics</h2>
-        <ul>
-          <li><strong>Arena Chaos:</strong> Navigate an evolving battlefield with hazards, enemy ambushes, and environmental challenges.</li>
-          <li><strong>Fluid Controls:</strong> Responsive movement and fast-paced gunplay create an intense combat experience.</li>
-          <li><strong>Weapon Mastery:</strong> Each gun feels unique—master their strengths and weaknesses.</li>
-        </ul>
+      <div class="media-container" style="max-width: 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-self: center;">
+        <img src="https://github.com/AleksandrosP38/HoDWeb/blob/main/buff%201.png?raw=true" alt="Buff example 1" style="width: 100%; border-radius: 0.8rem; box-shadow: 0 0 10px #0ff;"/>
+        <img src="https://github.com/AleksandrosP38/HoDWeb/blob/main/buff%202.png?raw=true" alt="Buff example 2" style="width: 100%; border-radius: 0.8rem; box-shadow: 0 0 10px #0ff;"/>
       </div>
     </div>
 
+    <!-- Final Section with Splash Image -->
     <div class="section">
-      <div class="text left">
+      <div class="media-container" style="max-width: 400px;">
+        <img src="https://github.com/AleksandrosP38/HoDWeb/blob/main/EdSplash.png?raw=true" alt="Call to action" />
+      </div>
+      <div class="text right" style="display: flex; flex-direction: column;">
         <h2>Are You Ready for the Ultimate FPS Challenge?</h2>
         <p>Every shot matters. Every headshot has consequences. Will you dominate the chaos—or fall victim to it?</p>
-        <p>🟥 <strong>Follow us for updates!</strong> 🟩</p>
+        
+        <div style="margin-top: 1.5rem; text-align: right;">
+          <p style="margin-bottom: 0.5rem;">🟥 <strong>Follow us for updates!</strong> 🟩</p>
+          <div style="display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem;">
+            <span>Heads or Death X account:</span>
+            <a href="https://x.com/headsordeath?s=21" target="_blank" style="color: #0ff; text-decoration: none; display: flex; align-items: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span style="border-bottom: 1px solid #0ff;">@headsordeath</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <img src="https://picsum.photos/400?random=7" alt="Call to action" />
     </div>
   </div>
 </body>
