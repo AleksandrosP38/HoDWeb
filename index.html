@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heads or Death</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    
+
+    header {
+      background-color: #111;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .content {
+  padding: 6rem 1rem 4rem 1rem; /* reduced side padding */
+  max-width: 100%;              /* use full width of screen */
+  margin: 0 auto;
+}
+
+    h1, h2, h3 {
+      color: #0ff;
+    }
+
+    .section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 8rem 0;
+  gap: 2rem;
+  padding: 0; /* Remove padding here */
+}
+
+.text {
+  line-height: 1.8;
+  padding: 0 2rem; /* Add padding to text instead */
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.right p, .right ul, .right h2 {
+  margin-left: auto;
+  max-width: 90%;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #0ff2;
+  /* Add these to make images stick to edges */
+  justify-self: end; /* For right-aligned images */
+}
+
+.section:nth-child(odd) img {
+  justify-self: start; /* For left-aligned images */
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .right, .left {
+    text-align: left;
+  }
+
+  .right p, .right ul, .right h2 {
+    margin-left: 0;
+  }
+
+  img {
+    margin-top: 1rem;
+    justify-self: center !important; /* Center images on mobile */
+  }
+}
+
+    .intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  margin: 0.5rem 0;
+  letter-spacing: 2px;
+}
+
+.intro h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+
+  <div class="intro">
+    <h1><p></p>HEADS OR DEATH</h1>
+    <h3>First-Person Arena Shooter</h3>
+    <p><strong>Platform:</strong> PC</p>
+  </div>
+  
+  <div class="content">
+
+    <div class="section">
+      <div class="text left">
+        <h2>Survive the Chaos, Master the Mayhem!</h2>
+        <p>In <em>Heads or Death</em>, every shot counts—literally. Battle against waves of enemies in a futuristic arena where <strong>headshots</strong> don’t just eliminate enemies; they determine your fate. Land a <strong>green</strong> headshot, and you gain a <strong>buff</strong>. Hit a <strong>red</strong> one, and you suffer a <strong>debuff</strong>. Precision is the key to survival in this <strong>high-speed FPS challenge!</strong></p>
+      </div>
+      <img src="https://picsum.photos/400?random=1" alt="Topic Image" />
+    </div>
+
+    <div class="section">
+      <img src="https://picsum.photos/400?random=2" alt="Topic Image" />
+      <div class="text right">
+        <h2>Adrenaline-Fueled Gameplay</h2>
+        <p>The game pushes you to react fast, aim true, and adapt to unpredictable power shifts as enemies get stronger. Survive as long as possible, stack buffs, and dominate the arena!</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="text left">
+        <h2>Dynamic Buff & Debuff System</h2>
+        <p>Your aim dictates the outcome. Each enemy’s <strong>head changes color</strong>, and your choice determines your fate:</p>
+        <ul>
+          <li>✅ <strong>Green Headshot</strong> – Gain a Buff!</li>
+          <li>❌ <strong>Red Headshot</strong> – Receive a Debuff!</li>
+        </ul>
+        <p>Buffs can supercharge your abilities—faster movement, more damage, or even bullet storms. But beware: debuffs can slow you down, weaken your attacks, or throw unexpected chaos into the mix!</p>
+      </div>
+      <img src="https://picsum.photos/400?random=3" alt="Topic Image" />
+    </div>
+
+    <div class="section">
+      <img src="https://picsum.photos/400?random=4" alt="Topic Image" />
+      <div class="text right">
+        <h2>Fast-Paced Combat & Advanced Mechanics</h2>
+        <ul>
+          <li><strong>Arena Chaos:</strong> Navigate an evolving battlefield with hazards, enemy ambushes, and environmental challenges.</li>
+          <li><strong>Fluid Controls:</strong> Responsive movement and fast-paced gunplay create an intense combat experience.</li>
+          <li><strong>Weapon Mastery:</strong> Each gun feels unique—master their strengths and weaknesses.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="text left">
+        <h2>Game Modes</h2>
+        <ul>
+          <li>🔥 <strong>Survival Mode</strong> – Face endless waves of enemies, stacking buffs and debuffs as you fight to stay alive.</li>
+          <li>🎯 <strong>Challenge Mode</strong> – Take on specific skill-based trials that push your accuracy to the limit.</li>
+          <li>🔫 <strong>Multiplayer Duels</strong> – Compete against other players in intense, high-speed FPS battles.</li>
+        </ul>
+      </div>
+      <img src="https://picsum.photos/400?random=5" alt="Topic Image" />
+    </div>
+
+    <div class="section">
+      <img src="https://picsum.photos/400?random=6" alt="Topic Image" />
+      <div class="text right">
+        <h2>Mod Support & Customization</h2>
+        <p>We believe in <strong>player creativity</strong>. <em>Heads or Death</em> features modding support, allowing you to <strong>customize weapons, create new arenas, and design unique buffs & debuffs</strong> to make the game even crazier!</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="text left">
+        <h2>Are You Ready for the Ultimate FPS Challenge?</h2>
+        <p>Every shot matters. Every headshot has consequences. Will you dominate the chaos—or fall victim to it?</p>
+        <p>🟥 <strong>Follow us for updates!</strong> 🟩</p>
+      </div>
+      <img src="https://picsum.photos/400?random=7" alt="Topic Image" />
+    </div>
+  </div>
+</body>
+</html>
